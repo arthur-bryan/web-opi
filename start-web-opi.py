@@ -17,9 +17,9 @@ GPIO.setwarnings(False)
 GPIOs = {
     7: {'nome': 'GPIO 7', 'status': GPIO.LOW},
     11: {'nome': 'GPIO 11', 'status': GPIO.LOW},
-    12: {'nome': 'GPIO 12', 'status': GPIO.LOW},
     13: {'nome': 'GPIO 13', 'status': GPIO.LOW},
-	15: {'nome': 'GPIO 15', 'status': GPIO.LOW}
+    15: {'nome': 'GPIO 15', 'status': GPIO.LOW},
+	22: {'nome': 'GPIO 22', 'status': GPIO.LOW}
 }
 
 temp = float(open('/sys/class/thermal/thermal_zone0/temp').read())

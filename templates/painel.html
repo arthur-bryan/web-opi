@@ -41,32 +41,32 @@
                         	</div>
                     	{% endif %}
 
-	                	{% if pins[12].status == true %}
+	                	{% if pins[13].status == true %}
     	                    <div>
-        	            		<a href="/12/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 12 </a>
+        	            		<a href="/13/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 13 </a>
             	            </div>
                 		{% else %}
                     	    <div>
-                        		<a href="/12/on" class="btn btn-block btn-lg btn-success" role="button"><i class="fas fa-toggle-off"></i> Turn on GPIO 12 </a>
+                        		<a href="/13/on" class="btn btn-block btn-lg btn-success" role="button"><i class="fas fa-toggle-off"></i> Turn on GPIO 13 </a>
   	                    	</div>
     	                {% endif %}
 
-                        {% if pins[13].status == true %}
-                            <div>
-                                <a href="/13/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 13 </a>
-                            </div>
-                        {% else %}
-                            <div>
-                                <a href="/13/on" class="btn btn-block btn-lg btn-success" role="button"><i class="fas fa-toggle-off"></i> Turn on GPIO 13 </a>
-                            </div>
-						{% endif %}
                         {% if pins[15].status == true %}
                             <div>
-                                <a href="/15/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 15</a>
+                                <a href="/15/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 15 </a>
                             </div>
                         {% else %}
                             <div>
                                 <a href="/15/on" class="btn btn-block btn-lg btn-success" role="button"><i class="fas fa-toggle-off"></i> Turn on GPIO 15 </a>
+                            </div>
+						{% endif %}
+                        {% if pins[22].status == true %}
+                            <div>
+                                <a href="/22/off" class="btn btn-block btn-lg btn-danger" role="button"><i class="fas fa-toggle-on"></i> Turn off GPIO 22</a>
+                            </div>
+                        {% else %}
+                            <div>
+                                <a href="/22/on" class="btn btn-block btn-lg btn-success" role="button"><i class="fas fa-toggle-off"></i> Turn on GPIO 22 </a>
                             </div>
                         {% endif %}
                 	</div>
@@ -86,11 +86,6 @@
                             {% else %}
                                 <p> GPIO 11 is now: <strong> OFF </strong> </p>
                             {% endif %}
-                            {% if pins[12].status == true %}
-                                <p> GPIO 12 is now: <strong> ON </strong> </p>
-                            {% else %}
-                                <p> GPIO 12 is now: <strong> OFF </strong> </p>
-                            {% endif %}
                             {% if pins[13].status == true %}
                                 <p> GPIO 13 is now: <strong> ON </strong> </p>
                             {% else %}
@@ -100,6 +95,11 @@
                                 <p> GPIO 15 is now: <strong> ON </strong> </p>
                             {% else %}
                                 <p> GPIO 15 is now: <strong> OFF </strong> </p>
+                            {% endif %}
+                            {% if pins[22].status == true %}
+                                <p> GPIO 22 is now: <strong> ON </strong> </p>
+                            {% else %}
+                                <p> GPIO 22 is now: <strong> OFF </strong> </p>
                             {% endif %}
 
                     	</div>
