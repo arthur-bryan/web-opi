@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Righteous';
+  src:  url("/static/fonts/Righteous/Righteous-Regular.ttf") format('truetype')
+}
+
+@font-face {
+  font-family: 'Squada One';
+  src:  url("/static/fonts/Squada_One/SquadaOne-Regular.ttf") format('truetype')
+}
+
+body {
+    background-image: url('img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Righteous', serif;
+}
+
+.navbar.navbar-inverse {
+    font-family: 'Squada One', serif;
+    padding: 5px;
+	padding-top: 3px;
+    height: 10%;
+}
+
+.navbar .navbar-brand {
+    padding-top: 3px;
+    font-size: 32px;
+    color: rgb(218, 206, 206);
+}
+
+.btn {
+    font-size: 23px;
+    height: 60px;
+}
+
+
+li#button {
+    margin-left: 6px;
+}
+
+#jumb1 {
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#jumb1 .btn {
+    width: 100%;
+    margin-bottom: 3%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#jumb2 {
+    background-color: rgba(220, 220, 220, .8);
+    padding: 4%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+    min-height: 100%;
+}
+
+#jumb2 h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+
