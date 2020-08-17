@@ -29,3 +29,9 @@ $ sudo ./setup.sh
 
   - YouTube: https://www.youtube.com
   - My site: https://arthur-bryan.github.io/website/index.html
+  
+  
+### Tip
+
+  - You can use tools like ngrok no expose your server to the internet 
+    and access it through a subdomain whitout the need of a public IP on the local machine.
