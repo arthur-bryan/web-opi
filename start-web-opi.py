@@ -25,8 +25,7 @@ GPIOs = {
 temp = float(open('/sys/class/thermal/thermal_zone0/temp').read())
 temp = "{0:0.1f} °C".format(temp / 1000)
 
-for pin in GPIOs:  # set all GPIOs on gpios dict to output mode
-    GPIO.setup(pin, GPIO.OUT)
+[GPIO.setup(pin, GPIO.OUT) for pin in GPIOs] #  set the pins to output mode.
 
 
 @app.route("/")
@@ -41,17 +40,13 @@ def default_route():
 
 
 def change_gpio(gpio_num, value):
-    if gpio_num in list(GPIOs.keys()) and value == "on":
-        GPIO.output(gpio_num, True)
-    elif gpio_num in list(GPIOs.keys()) and value == "off":
-        GPIO.output(gpio_num, False)
+    if gpio_num in list(GPIOs.keys()):
+        status = {'on': True, 'off': False}.get(value)
+        GPIO.output(gpio_num, status)
 
 
 def speak(pin_number, status):
-    if status == "on" and pin_number in list(GPIOs.keys()):
-        os.system("mpg123 " + os.path.abspath("audio_files/{}-on.mp3".format(pin_number)))
-    elif status == "off" and pin_number in list(GPIOs.keys()):
-        os.system("mpg123 " + os.path.abspath("audio_files/{}-off.mp3".format(pin_number)))
+    os.system("mpg123 " + os.path.abspath("audio_files/{}-{}.mp3".format(pin_number, status)))
 
 
 @app.route("/<pin_number>/<status>")

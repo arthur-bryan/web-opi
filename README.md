@@ -15,6 +15,7 @@ $ git clone https://github.com/arthur-bryan/web-opi
 $ cd web-opi
 $ chmod +x setup.sh
 $ sudo ./setup.sh
+$ sudo python3 start_web_opi.py
 ```
 
 
@@ -29,9 +30,3 @@ $ sudo ./setup.sh
 
   - YouTube: https://www.youtube.com
   - My site: https://arthur-bryan.github.io/website/index.html
-  
-  
-### Tip
-
-  - You can use tools like ngrok no expose your server to the internet 
-    and access it through a subdomain whitout the need of a public IP on the local machine.
