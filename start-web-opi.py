@@ -8,6 +8,8 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
+DEFAULT_LISTEN_ADDR = '0.0.0.0'
+DEFAULT_LISTEN_PORT = 8080
 
 # SETUP THE Orange PI PC GPIO's - SEE MORE: https://opi-gpio.readthedocs.io/en/latest/
 # GPIO.setboard(GPIO.PC2)
@@ -65,4 +67,4 @@ def send_action(pin_number, status):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host=DEFAULT_LISTEN_ADDRESS, port=DEFAULT_LISTEN_PORT)

@@ -1,8 +1,10 @@
+![alt text](https://github.com/arthur-bryan/web-opi/blob/master/static/images/facebook_cover_photo_2.png?raw=true)
+
 # WEB-OPI
 
 Web-OPI is mini webserver to control your Orange PI GPIOs from wherever you are.
 
-  - Control lamps, fans, relays for automation and mode.
+  - Control lamps, fans, relays for automation, and more.
   - See the current Orange PI temperature.
   - Access by your phone or computer.
 
@@ -18,6 +20,8 @@ $ sudo ./setup.sh
 $ sudo python3 start_web_opi.py
 ```
 
+PS: Delete the files in audio_files and create new ones as you need.
+There is a script that converts strings to mp3 files (see /audio_files/create_audio.py)
 
 ### Requirements
 
@@ -28,5 +32,5 @@ $ sudo python3 start_web_opi.py
 
 ### Demonstration
 
-  - YouTube: https://www.youtube.com
-  - My site: https://arthur-bryan.github.io/website/index.html
+  - YouTube: https://www.youtube.com/watch?v=T7odtEwHvsE
+  - My site: https://arthur-bryan.github.io/website/templates/web-opi

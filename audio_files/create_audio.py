@@ -1,25 +1,28 @@
 import os
 from gtts import gTTS
 
+# Script that converts a string to .mp3
+
+DEFAULT_LANG = 'en-us'
 
 def str_to_mp3():
     ''' Convert a string to a .mp3 file and play it.
-        Params:
-            phrase (str): word or phrase to be converted.
             filename (str): name of the final file.
         Usage:
             convert("Hello Word", "hello.mp3")
     '''
     phrase = input(">> Type the word or phrase do you want to convert: ")
-    filename = input(">> Type the output filename: ")
+    filename = input(">> Type the output (mp3) filename: ")
     try:
-        tts = gTTS(phrase, lang='en-us')
+        tts = gTTS(phrase, lang=DEFAULT_LANG)
     except ValueError as error:
         print(f"Error: {error}.")
     else:
         if not '.mp3' in filename:
             filename = filename + '.mp3'	# adds the '.mp3' extencion if not set by user
         tts.save(filename.replace('.mp3', '') + '.mp3')
-        os.system('mpg123 ' + filename)	# uses mpg123 player by default
+        print(f"[ + ] MP3 file saved successfully!")
+        # os.system('mpg123 ' + filename)	# uncoment to play the mp3 after creation (uses mpg123 player)
 
-str_to_mp3()
+if __name__ == "__main__":
+    str_to_mp3()
