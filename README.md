@@ -46,4 +46,4 @@ There is a script that converts strings to mp3 files (see create_audio.py)
 
 ## :copyright: License
 
-[MIT Lincense] (https://github.com/arthur-bryan/web-opi/blob/master/LICENSE.md)
+[MIT Lincense](https://github.com/arthur-bryan/web-opi/blob/master/LICENSE.md)
