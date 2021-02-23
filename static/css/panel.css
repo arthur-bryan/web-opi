@@ -1,15 +1,15 @@
 @font-face {
-  font-family: 'Righteous';
-  src:  url("/static/fonts/Righteous/Righteous-Regular.ttf") format('truetype')
+    font-family: 'Righteous';
+    src:  url("/static/fonts/Righteous/Righteous-Regular.ttf") format('truetype')
 }
 
 @font-face {
-  font-family: 'Squada One';
-  src:  url("/static/fonts/Squada_One/SquadaOne-Regular.ttf") format('truetype')
+    font-family: 'Squada One';
+    src:  url("/static/fonts/Squada_One/SquadaOne-Regular.ttf") format('truetype')
 }
 
 body {
-    background-image: url('img.jpg');
+    background-image: url("../images/img.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -19,7 +19,7 @@ body {
 .navbar.navbar-inverse {
     font-family: 'Squada One', serif;
     padding: 5px;
-	padding-top: 3px;
+    padding-top: 3px;
     height: 10%;
 }
 
@@ -39,6 +39,11 @@ li#button {
     margin-left: 6px;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+}
+
 #jumb1 {
     margin-top: 10%;
     background-color: rgba(0, 0, 0, .5);
@@ -54,8 +59,8 @@ li#button {
 #jumb2 {
     background-color: rgba(220, 220, 220, .8);
     padding: 4%;
-	padding-top: 2%;
-	padding-bottom: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     min-height: 100%;
 }
 

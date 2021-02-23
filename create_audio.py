@@ -6,11 +6,7 @@ from gtts import gTTS
 DEFAULT_LANG = 'en-us'
 
 def str_to_mp3():
-    ''' Convert a string to a .mp3 file and play it.
-            filename (str): name of the final file.
-        Usage:
-            convert("Hello Word", "hello.mp3")
-    '''
+    ''' Convert a string to a .mp3 file '''
     phrase = input(">> Type the word or phrase do you want to convert: ")
     filename = input(">> Type the output (mp3) filename: ")
     try:
