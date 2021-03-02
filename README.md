@@ -1,4 +1,5 @@
 ![alt text](https://github.com/arthur-bryan/web-opi/blob/master/static/images/facebook_cover_photo_2.png?raw=true)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/99f225a005a44996b64fa8070cc0aba9)](https://app.codacy.com/gh/arthur-bryan/web-opi?utm_source=github.com&utm_medium=referral&utm_content=arthur-bryan/web-opi&utm_campaign=Badge_Grade_Settings)
 [![Open Source](https://img.shields.io/badge/-Open%20Source-3066be?logo=Github&logoColor=white&link=https://github.com/arthur-bryan/pisco)](https://github.com/arthur-bryan/pisco)
 [![Status Badge](	https://img.shields.io/badge/status-development-3066be)](https://github.com/arthur-bryan/web-opi)
 ![GitHub](https://img.shields.io/github/license/arthur-bryan/web-opi?color=blue)
