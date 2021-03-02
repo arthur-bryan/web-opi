@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template
 import OPi.GPIO as GPIO
 import os
 import threading
@@ -33,7 +33,7 @@ for pin in GPIOs:
 
 @app.route("/")
 def control_panel():
-    """Route that render the main template with current GPIOs status"""
+    """Route that render the main template with current GPIOs status."""
     for GPIO_number in GPIOs:
         GPIOs[GPIO_number]['status'] = GPIO.input(GPIO_number)
     data_for_template = {
@@ -44,7 +44,7 @@ def control_panel():
 
 
 def change_gpio(gpio_num, value):
-    """Changes the current value of the GPIO
+    """Changes the current value of the GPIO.
 
         Args:
             gpio_num (int): the GPIO number to be controlled

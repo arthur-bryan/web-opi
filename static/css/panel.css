@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Righteous';
-  src: url("/static/fonts/Righteous/Righteous-Regular.ttf") format('truetype')
+  src: url("/static/fonts/Righteous/Righteous-Regular.ttf") format('truetype');
 }
 
 @font-face {
   font-family: 'Squada One';
-  src: url("/static/fonts/Squada_One/SquadaOne-Regular.ttf") format('truetype')
+  src: url("/static/fonts/Squada_One/SquadaOne-Regular.ttf") format('truetype');
 }
 
 body {
