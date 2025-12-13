@@ -2,9 +2,6 @@ from flask import Flask, render_template
 import OPi.GPIO as GPIO
 import os
 import threading
-import urllib3
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 app = Flask(__name__)
 
@@ -24,8 +21,15 @@ GPIOs = {
     22: {'nome': 'GPIO 22', 'status': GPIO.LOW}
 }
 
-temp = float(open('/sys/class/thermal/thermal_zone0/temp').read())
-temp = "{0:0.1f} °C".format(temp / 1000)
+
+def get_temperature():
+    """Reads the current CPU temperature from the thermal zone."""
+    try:
+        with open('/sys/class/thermal/thermal_zone0/temp') as f:
+            temp = float(f.read())
+        return "{0:0.1f} °C".format(temp / 1000)
+    except (IOError, ValueError):
+        return "N/A"
 
 for pin in GPIOs:
     GPIO.setup(pin, GPIO.OUT)  # set the pins to output mode.
@@ -38,7 +42,7 @@ def control_panel():
         GPIOs[GPIO_number]['status'] = GPIO.input(GPIO_number)
     data_for_template = {
         'pins': GPIOs,
-        'temp': temp
+        'temp': get_temperature()
     }
     return render_template('panel.html', **data_for_template)
 
@@ -60,21 +64,23 @@ def speak(pin_number, status):
     os.system("mpg123 " + os.path.abspath("static/audio/{}-{}.mp3".format(pin_number, status)))
 
 
-@app.route("/<pin_number>/<status>")
+@app.route("/<int:pin_number>/<status>")
 def send_action(pin_number, status):
     """Route that render the updated GPIO's status after an taken action
         On button press, two threads starts: one for speaking the action, other
         for changing the GPIO status.
     """
-    f1 = threading.Thread(target=speak, args=[int(pin_number), status])
-    f2 = threading.Thread(target=change_gpio, args=[int(pin_number), status])
+    if pin_number not in GPIOs or status not in ('on', 'off'):
+        return render_template('panel.html', pins=GPIOs, temp=get_temperature())
+    f1 = threading.Thread(target=speak, args=[pin_number, status])
+    f2 = threading.Thread(target=change_gpio, args=[pin_number, status])
     f1.start()
     f2.start()
     for GPIO_number in GPIOs:
         GPIOs[GPIO_number]['status'] = GPIO.input(GPIO_number)
     data_for_template = {
         'pins': GPIOs,
-        'temp': temp
+        'temp': get_temperature()
     }
     return render_template('panel.html', **data_for_template)
 

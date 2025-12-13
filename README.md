@@ -22,9 +22,9 @@ $ git clone https://github.com/arthur-bryan/web-opi
 $ cd web-opi
 $ chmod +x setup.sh
 $ sudo ./setup.sh
-$ sudo python3 start_web_opi.py
+$ sudo python3 start-web-opi.py
 ```
-PS: By default, the server will start listenning on 0.0.0.0 at port 8080, change it on start_web_opi.py
+PS: By default, the server will start listening on 0.0.0.0 at port 8080, change it on start-web-opi.py
 Delete the files in audio_files and create new ones as you need.
 There is a script that converts strings to mp3 files (see create_audio.py)
 
@@ -35,7 +35,7 @@ There is a script that converts strings to mp3 files (see create_audio.py)
 
 ## :movie_camera: Demonstration
 -  YouTube: https://www.youtube.com/watch?v=T7odtEwHvsE
--  My site: https://arthur-bryan.github.io/website/templates/web-opi
+-  My site: https://arthurbryan.dev.br
 
 ![Screen Capture_select-area_20210223080858](https://user-images.githubusercontent.com/34891953/108835746-ab156f00-75ae-11eb-81b5-1a21d196d0c8.png)
 
